@@ -25,11 +25,7 @@ SECRET_KEY = 'django-insecure-_g^li+7sha&&o1+mtd&67y)$dl=aqufo#5%ww@4o8@ey+anf89
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh', '127.0.0.1', 'localhost']
-=======
-ALLOWED_HOSTS = ['.onrender.com']
->>>>>>> b8b69eca739908fd3d30fbd9b26b8bd9b8e4aff9
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -48,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -81,19 +76,12 @@ WSGI_APPLICATION = 'iblog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -127,20 +115,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-<<<<<<< HEAD
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
-=======
 STATIC_URL = 'static/'
-STATIC_ROOT = 'staticfiles'
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
->>>>>>> b8b69eca739908fd3d30fbd9b26b8bd9b8e4aff9
 
 MEDIA_URL = '/Media/'
 
@@ -150,9 +125,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
 
 MATERIAL_ADMIN_SITE = {
     'HEADER': 'IBlog Admin Login',  # Admin site header
